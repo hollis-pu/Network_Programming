@@ -16,7 +16,7 @@ import (
 // UDPSenderMulticast 多播发送端
 func UDPSenderMulticast() {
 	// 1.建立UDP多播组连接
-	address := "192.168.1.255:6789"
+	address := "224.1.1.2:6789"
 	raddr, err := net.ResolveUDPAddr("udp", address)
 	if err != nil {
 		log.Fatalln(err)
