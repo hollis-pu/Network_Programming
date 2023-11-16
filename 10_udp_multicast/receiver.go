@@ -39,13 +39,10 @@ func UDPReceiverMulticast() {
 	// 循环接收
 	buf := make([]byte, 1024)
 	for {
-		log.Println("hello")
 		n, raddr, err := udpConn.ReadFromUDP(buf)
-		log.Println("len:", n)
 		if err != nil {
 			log.Println(err)
 		}
-		log.Println("hello")
 		log.Printf("received \"%s\" from %s\n", string(buf[:n]), raddr.String())
 	}
 }
